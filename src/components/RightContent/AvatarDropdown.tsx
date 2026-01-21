@@ -66,7 +66,7 @@ const AvatarDropdown: React.FC<GlobalHeaderRightProps> = ({ menu }) => {
 		},
 	];
 
-	if (menu && !initialState.currentUser.realm_access?.roles?.includes('QUAN_TRI_VIEN')) {
+	if (menu && !initialState.currentUser.realm_access?.roles?.includes('GUEST')) {
 		// items.splice(1, 0, {
 		//   key: 'center',
 		//   icon: <UserOutlined />,
