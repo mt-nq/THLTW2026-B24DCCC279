@@ -11,21 +11,38 @@ const initProducts: Product[] = [
 ];
 
 export default function useStore() {
-	const [products, setProducts] = useState<Product[]>([]);
+	const [products, setProducts] = useState<Product[]>(initProducts);
 	const [orders, setOrders] = useState<Order[]>([]);
 
 	useEffect(() => {
-		setProducts(JSON.parse(localStorage.getItem('products') || 'null') ?? initProducts);
-		setOrders(JSON.parse(localStorage.getItem('orders') || '[]'));
+		const storedProducts = JSON.parse(localStorage.getItem('products') || 'null');
+		const storedOrders = JSON.parse(localStorage.getItem('orders') || 'null');
+
+		if (Array.isArray(storedProducts) && storedProducts.length > 0) {
+			setProducts(storedProducts);
+		} else {
+			setProducts(initProducts);
+		}
+
+		if (Array.isArray(storedOrders)) {
+			setOrders(storedOrders);
+		}
 	}, []);
 
 	useEffect(() => {
-		localStorage.setItem('products', JSON.stringify(products));
+		if (products.length > 0) {
+			localStorage.setItem('products', JSON.stringify(products));
+		}
 	}, [products]);
 
 	useEffect(() => {
 		localStorage.setItem('orders', JSON.stringify(orders));
 	}, [orders]);
 
-	return { products, setProducts, orders, setOrders };
+	return {
+		products,
+		setProducts,
+		orders,
+		setOrders,
+	};
 }

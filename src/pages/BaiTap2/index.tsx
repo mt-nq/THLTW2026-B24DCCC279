@@ -1,9 +1,9 @@
 import { Tabs } from 'antd';
 import React from 'react';
 
-import Dashboard from './Dashboard';
-import Orders from './Orders';
-import Products from './Products';
+import Dashboard from './pages/Dashboard';
+import Orders from './pages/Orders';
+import Products from './pages/Products';
 
 const { TabPane } = Tabs;
 

@@ -1,16 +1,20 @@
-import { Table, Tag } from 'antd';
 import React from 'react';
+import { Table, Tag } from 'antd';
 import { useModel } from 'umi';
 import type { Order } from '../types';
 
 const Orders: React.FC = () => {
-	const { orders } = useModel('store') as unknown as {
-		orders: Order[];
-	};
+	const model = useModel('BaiTap2.store') as
+		| {
+				orders: Order[];
+		}
+		| undefined;
+
+	const orders: Order[] = model?.orders ?? [];
 
 	return (
 		<Table<Order>
-			rowKey='id'
+			rowKey="id"
 			dataSource={orders}
 			columns={[
 				{
