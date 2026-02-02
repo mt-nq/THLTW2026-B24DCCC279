@@ -6,6 +6,8 @@ interface Props {
 	duLieu: SanPham[];
 }
 
+
+
 const BangSanPham = ({ duLieu }: Props) => {
 	const { xoaSanPham } = useModel('BaiTap1.sanpham');
 

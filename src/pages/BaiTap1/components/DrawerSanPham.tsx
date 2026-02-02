@@ -8,6 +8,8 @@ interface Props {
 	dong: () => void;
 }
 
+
+
 const DrawerSanPham: React.FC<Props> = ({ mo, dong }) => {
 	const [form] = Form.useForm<SanPham>();
 	const { themSanPham } = useModel('BaiTap1.sanpham');
