@@ -62,6 +62,9 @@ import type { IInitialState } from './services/base/typing';
 //       },
 //
 
+
+
+
 export default function access(initialState: IInitialState) {
 	const scopes = initialState.authorizedPermissions?.map((item) => item.scopes).flat() || [];
 

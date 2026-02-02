@@ -73,6 +73,9 @@ const AvatarDropdown: React.FC<GlobalHeaderRightProps> = ({ menu }) => {
 		//   label: 'Trang cá nhân',
 		//   onClick: () => history.push('/account/center'),
 		// });
+
+
+
 	}
 
 	return (

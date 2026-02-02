@@ -5,6 +5,8 @@ import { useModel } from 'umi';
 import DrawerSanPham from './components/DrawerSanPham';
 import BangSanPham from './components/Table';
 
+
+
 const TrangSanPham = () => {
 	const { danhSachSanPham } = useModel('BaiTap1.sanpham');
 
