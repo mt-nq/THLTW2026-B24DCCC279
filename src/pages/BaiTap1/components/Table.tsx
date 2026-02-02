@@ -9,10 +9,12 @@ interface Props {
 const BangSanPham = ({ duLieu }: Props) => {
 	const { xoaSanPham } = useModel('BaiTap1.sanpham');
 
+	const { suaSanPham } = useModel('BaiTap1.sanpham');
+
 	const cot = [
 		{
 			title: 'STT',
-			render: (_: unknown, __: unknown, index: number) => index + 1,
+			dataIndex: 'id',
 		},
 		{
 			title: 'Tên sản phẩm',
@@ -41,6 +43,16 @@ const BangSanPham = ({ duLieu }: Props) => {
 						<Button type='link' danger>
 							Xóa
 						</Button>
+					</Popconfirm>
+
+					<Popconfirm
+						title='Bạn có chắc muốn sửa?'
+						onConfirm={() => {
+							suaSanPham(record.id, { ...record, soLuong: record.soLuong + 1 });
+							message.success('Sửa sản phẩm thành công');
+						}}
+					>
+						<Button type='link'>Sửa</Button>
 					</Popconfirm>
 				</>
 			),

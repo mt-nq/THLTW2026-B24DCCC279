@@ -49,6 +49,13 @@
 		component: './BaiTap1',
 	},
 
+	{
+		path: '/baitap2',
+		name: 'BaiTap2',
+		icon: 'OrderedListOutlined',
+		component: './BaiTap2',
+	},
+
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',

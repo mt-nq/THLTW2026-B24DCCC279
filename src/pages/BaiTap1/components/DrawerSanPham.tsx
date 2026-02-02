@@ -1,3 +1,4 @@
+import rules from '@/utils/rules';
 import { Button, Drawer, Form, Input, InputNumber, message } from 'antd';
 import { useModel } from 'umi';
 import type { SanPham } from '../models/sanpham';
@@ -10,11 +11,12 @@ interface Props {
 const DrawerSanPham: React.FC<Props> = ({ mo, dong }) => {
 	const [form] = Form.useForm<SanPham>();
 	const { themSanPham } = useModel('BaiTap1.sanpham');
+	const { danhSachSanPham } = useModel('BaiTap1.sanpham');
 
 	const xuLyLuu = (giaTri: SanPham) => {
 		themSanPham({
 			...giaTri,
-			id: Date.now(),
+			id: danhSachSanPham.length + 1,
 		});
 		message.success('Thêm sản phẩm thành công');
 		form.resetFields();
@@ -38,19 +40,11 @@ const DrawerSanPham: React.FC<Props> = ({ mo, dong }) => {
 					<Input />
 				</Form.Item>
 
-				<Form.Item
-					label='Giá'
-					name='gia'
-					rules={[{ required: true }, { type: 'number', min: 1, message: 'Giá phải > 0' }]}
-				>
+				<Form.Item label='Giá' name='gia' rules={rules.number(99999999, 0, true)}>
 					<InputNumber style={{ width: '100%' }} />
 				</Form.Item>
 
-				<Form.Item
-					label='Số lượng'
-					name='soLuong'
-					rules={[{ required: true }, { type: 'number', min: 1, message: 'Số lượng phải > 0' }]}
-				>
+				<Form.Item label='Số lượng' name='soLuong' rules={rules.number(99999999, 0, false)}>
 					<InputNumber style={{ width: '100%' }} />
 				</Form.Item>
 			</Form>

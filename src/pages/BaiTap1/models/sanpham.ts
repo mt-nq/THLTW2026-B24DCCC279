@@ -23,9 +23,14 @@ export default () => {
 		setDanhSachSanPham((ds) => ds.filter((sp) => sp.id !== id));
 	};
 
+	const suaSanPham = (id: number, sanPhamMoi: SanPham) => {
+		setDanhSachSanPham((ds) => ds.map((sp) => (sp.id === id ? sanPhamMoi : sp)));
+	};
+
 	return {
 		danhSachSanPham,
 		themSanPham,
 		xoaSanPham,
+		suaSanPham,
 	};
 };
