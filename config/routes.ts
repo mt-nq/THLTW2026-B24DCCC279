@@ -55,7 +55,18 @@
 		icon: 'OrderedListOutlined',
 		component: './BaiTap2',
 	},
-
+	{
+		path: '/th01-baitap1',
+		name: 'TH01-BaiTap1',
+		icon: 'OrderedListOutlined',
+		component: './TH01-BaiTap1',
+	},
+		{
+		path: '/th01-baitap2',
+		name: 'TH01-BaiTap2',
+		icon: 'OrderedListOutlined',
+		component: './TH01-BaiTap2',
+	},
 
 	{
 		path: '/notification',
