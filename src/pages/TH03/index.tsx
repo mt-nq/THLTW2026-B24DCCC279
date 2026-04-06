@@ -1,0 +1,222 @@
+import { useEffect, useState } from "react";
+import { load, save } from "./utils/storage";
+import "./components/style.less";
+
+import EmployeeForm from "./components/EmployeeForm";
+import EmployeeList from "./components/EmployeeList";
+import ServiceForm from "./components/ServiceForm";
+import ServiceList from "./components/ServiceList";
+import AppointmentForm from "./components/AppointmentForm";
+import AppointmentList from "./components/AppointmentList";
+import ReviewList from "./components/ReviewList";
+import Report from "./components/Report";
+
+type Page = 'dashboard' | 'employees' | 'services' | 'appointments' | 'reviews' | 'reports';
+
+export default function App() {
+const [employees, setEmployees] = useState<any[]>([]);
+const [services, setServices] = useState<any[]>([]);
+const [apps, setApps] = useState<any[]>([]);
+const [reviews, setReviews] = useState<any[]>([]);
+const [currentPage, setCurrentPage] = useState<Page>('dashboard');
+
+useEffect(() => {
+setEmployees(load("e"));
+setServices(load("s"));
+setApps(load("a"));
+setReviews(load("r"));
+}, []);
+
+useEffect(() => save("e", employees), [employees]);
+useEffect(() => save("s", services), [services]);
+useEffect(() => save("a", apps), [apps]);
+useEffect(() => save("r", reviews), [reviews]);
+
+const renderCurrentPage = () => {
+switch (currentPage) {
+    case 'dashboard':
+        return (
+            <div className="dashboard">
+                <h2>Tổng quan</h2>
+                <div className="stats-grid">
+                    <div className="stat-card">
+                        <h3>Nhân viên</h3>
+                        <p className="stat-number">{employees.length}</p>
+                    </div>
+                    <div className="stat-card">
+                        <h3>Dịch vụ</h3>
+                        <p className="stat-number">{services.length}</p>
+                    </div>
+                    <div className="stat-card">
+                        <h3>Lịch hẹn</h3>
+                        <p className="stat-number">{apps.length}</p>
+                    </div>
+                    <div className="stat-card">
+                        <h3>Đánh giá</h3>
+                        <p className="stat-number">{reviews.length}</p>
+                    </div>
+                </div>
+            </div>
+        );
+    case 'employees':
+        return (
+            <div className="page-content">
+                <h2>Quản lý Nhân viên</h2>
+                <EmployeeForm onAdd={(e: any) => setEmployees([...employees, e])} />
+                <EmployeeList 
+                    data={employees} 
+                    reviews={reviews}
+                    onDelete={(id: string) => setEmployees(employees.filter(e => e.id !== id))}
+                    onUpdate={(updated: any) =>
+                        setEmployees(employees.map(e => (e.id === updated.id ? { ...e, ...updated } : e)))
+                    }
+                />
+            </div>
+        );
+    case 'services':
+        return (
+            <div className="page-content">
+                <h2>Quản lý Dịch vụ</h2>
+                <ServiceForm onAdd={(s: any) => setServices([...services, s])} />
+                <ServiceList 
+                    data={services} 
+                    onUpdate={(updated: any) =>
+                        setServices(services.map(s => (s.id === updated.id ? { ...s, ...updated } : s)))
+                    }
+                    onDelete={(id: string) => setServices(services.filter(s => s.id !== id))}
+                />
+            </div>
+        );
+    case 'appointments':
+        return (
+            <div className="page-content">
+                <h2>Đặt Lịch Hẹn</h2>
+                <AppointmentForm
+                    employees={employees}
+                    services={services}
+                    apps={apps}
+                    onAdd={(a: any) => setApps([...apps, a])}
+                />
+                <AppointmentList
+                    data={apps}
+                    onUpdate={(id: string, status: string) => {
+                        setApps(prev => {
+                            const updated = prev.map(a =>
+                                a.id === id
+                                    ? {
+                                          ...a,
+                                          status,
+                                      }
+                                    : a
+                            );
+
+                            if (status === "completed") {
+                                const appointment = updated.find(a => a.id === id);
+                                if (!appointment) return updated;
+
+                                setReviews(prevReviews => {
+                                    const alreadyReviewed = prevReviews.some(r => r.appointmentId === id);
+                                    if (alreadyReviewed) return prevReviews;
+
+                                    const autogeneratedReview = {
+                                        id: Date.now().toString(),
+                                        appointmentId: id,
+                                        employeeId: appointment.employeeId,
+                                        rating: 5,
+                                        comment: "Đã hoàn thành lịch hẹn, đánh giá tự động.",
+                                    };
+
+                                    return [...prevReviews, autogeneratedReview];
+                                });
+                            }
+
+                            return updated;
+                        });
+                    }}
+                />
+            </div>
+        );
+    case 'reviews':
+        return (
+            <div className="page-content">
+                <h2>Đánh giá</h2>
+                <ReviewList
+                    reviews={reviews}
+                    employees={employees}
+                    onReply={(reviewId: string, reply: string) =>
+                        setReviews(prev =>
+                            prev.map(r =>
+                                r.id === reviewId
+                                    ? {
+                                          ...r,
+                                          reply,
+                                      }
+                                    : r
+                            )
+                        )
+                    }
+                />
+            </div>
+        );
+    case 'reports':
+        return (
+            <div className="page-content">
+                <h2>Báo cáo</h2>
+                <Report apps={apps} services={services} employees={employees} />
+            </div>
+        );
+    default:
+        return <div>Trang không tồn tại</div>;
+}
+};
+
+return (
+<div className="app">
+    <nav className="navbar">
+        <h1 className="app-title">Booking App</h1>
+        <div className="nav-links">
+            <button 
+                className={`nav-link ${currentPage === 'dashboard' ? 'active' : ''}`}
+                onClick={() => setCurrentPage('dashboard')}
+            >
+                Trang chủ
+            </button>
+            <button 
+                className={`nav-link ${currentPage === 'employees' ? 'active' : ''}`}
+                onClick={() => setCurrentPage('employees')}
+            >
+                Nhân viên
+            </button>
+            <button 
+                className={`nav-link ${currentPage === 'services' ? 'active' : ''}`}
+                onClick={() => setCurrentPage('services')}
+            >
+                Dịch vụ
+            </button>
+            <button 
+                className={`nav-link ${currentPage === 'appointments' ? 'active' : ''}`}
+                onClick={() => setCurrentPage('appointments')}
+            >
+                Lịch hẹn
+            </button>
+            <button 
+                className={`nav-link ${currentPage === 'reviews' ? 'active' : ''}`}
+                onClick={() => setCurrentPage('reviews')}
+            >
+                Đánh giá
+            </button>
+            <button 
+                className={`nav-link ${currentPage === 'reports' ? 'active' : ''}`}
+                onClick={() => setCurrentPage('reports')}
+            >
+                Báo cáo
+            </button>
+        </div>
+    </nav>
+
+    <main className="main-content">
+        {renderCurrentPage()}
+    </main>
+</div>
+);
+}

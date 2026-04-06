@@ -61,13 +61,42 @@
 		icon: 'OrderedListOutlined',
 		component: './TH01-BaiTap1',
 	},
-		{
+	{
 		path: '/th01-baitap2',
 		name: 'TH01-BaiTap2',
 		icon: 'OrderedListOutlined',
 		component: './TH01-BaiTap2',
 	},
-
+	{
+		path: '/th02-baitap1',
+		name: 'TH02-BaiTap1',
+		icon: 'OrderedListOutlined',
+		component: './TH02-BaiTap1',
+	},
+	{
+		path: '/th02-baitap2',
+		name: 'TH02-BaiTap2',
+		icon: 'OrderedListOutlined',
+		component: './TH02-BaiTap2',
+	},
+	{
+		path: '/th03',
+		name: 'TH03',
+		icon: 'OrderedListOutlined',
+		component: './TH03',
+	},
+	{
+		path: '/th04',
+		name: 'TH04',
+		icon: 'OrderedListOutlined',
+		component: './TH04',
+	},
+	{
+		path: '/th05',
+		name: 'TH05',
+		icon: 'OrderedListOutlined',
+		component: './TH05',
+	},
 	{
 		path: '/notification',
 		routes: [

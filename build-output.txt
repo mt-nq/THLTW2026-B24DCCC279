@@ -1,0 +1,312 @@
+
+> ant-design-pro@5.0.0 build
+> umi build
+
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Bundle with webpack 5...
+Mako https://makojs.dev is a new fast Rust based bundler from us, which is heavily optimized for umi and much faster than webpack. Visit https://makojs.dev/docs/getting-started#bundle-with-umi for more details if you want to give it a try.
+i Compiling Webpack
+(node:32016) [DEP_WEBPACK_CONFIGURATION_OPTIMIZATION_NO_EMIT_ON_ERRORS] DeprecationWarning: optimization.noEmitOnErrors is deprecated in favor of optimization.emitOnErrors
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:32016) [DEP_WEBPACK_COMPILATION_OPTIMIZE_CHUNK_ASSETS] DeprecationWarning: optimizeChunkAssets is deprecated (use Compilation.hooks.processAssets instead and use one of Compilation.PROCESS_ASSETS_STAGE_* as stage option)
+(node:32016) [DEP_WEBPACK_COMPILATION_NORMAL_MODULE_LOADER_HOOK] DeprecationWarning: Compilation.hooks.normalModuleLoader was moved to NormalModule.getCompilationHooks(compilation).loader
+Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+Why you should do it regularly:
+https://github.com/browserslist/browserslist#browsers-data-updating
+(node:32016) [DEP_WEBPACK_COMPILATION_ASSETS] DeprecationWarning: Compilation.assets will be frozen in future, all modifications are deprecated.
+BREAKING CHANGE: No more changes should happen to Compilation.assets after sealing the Compilation.
+	Do changes to assets earlier, e. g. in Compilation.hooks.processAssets.
+	Make sure to select an appropriate stage from Compilation.PROCESS_ASSETS_STAGE_*.
+√ Webpack: Compiled successfully in 8.01s
+ DONE  Compiled successfully in 8023ms3:28:53 PM
+
+ File                                         Size           Gzipped
+
+ dist\umi.4958ee12.js                         1.6 MB         509.3 KB
+ dist\tinymce\tinymce.min.js                  424.6 KB       157.8 KB
+ dist\tinymce\plugins\emoticons\js\emoji      406.2 KB       37.6 KB
+ images.js
+ dist\tinymce\plugins\emoticons\js\emoji      406.2 KB       37.6 KB
+ images.min.js
+ dist\tinymce\themes\silver\theme.min.js      404.5 KB       139.9 KB
+ dist\tinymce\plugins\emoticons\js\emoji      188.3 KB       29.7 KB
+ s.js
+ dist\tinymce\plugins\emoticons\js\emoji      188.3 KB       29.7 KB
+ s.min.js
+ dist\t__plugin-layout__Layout.1009315a.      144.2 KB       40.6 KB
+ async.js
+ dist\689.f2076aed.async.js                   131.6 KB       43.6 KB
+ dist\tinymce\models\dom\model.min.js         93.3 KB        34.5 KB
+ dist\tinymce\skins\ui\tinymce-5\skin.js      91.7 KB        13.6 KB
+ dist\tinymce\skins\ui\tinymce-5-dark\sk      91.6 KB        13.6 KB
+ in.js
+ dist\tinymce\skins\ui\oxide\skin.js          89.0 KB        13.1 KB
+ dist\tinymce\skins\ui\oxide-dark\skin.j      89.0 KB        13.1 KB
+ s
+ dist\897.82da73f7.async.js                   75.8 KB        23.6 KB
+ dist\tinymce\icons\default\icons.min.js      70.3 KB        17.4 KB
+ dist\8.42abdf74.async.js                     65.6 KB        24.2 KB
+ dist\tinymce\plugins\codesample\plugin.      47.1 KB        15.4 KB
+ min.js
+ dist\tinymce\plugins\table\plugin.min.j      46.6 KB        14.6 KB
+ s
+ dist\tinymce\plugins\lists\plugin.min.j      27.3 KB        10.3 KB
+ s
+ dist\559.ce700623.async.js                   24.9 KB        9.3 KB
+ dist\tinymce\skins\ui\tinymce-5\content      23.2 KB        5.7 KB
+ .js
+ dist\tinymce\skins\ui\oxide\content.js       23.2 KB        5.7 KB
+ dist\tinymce\skins\ui\tinymce-5-dark\co      23.2 KB        5.7 KB
+ ntent.inline.js
+ dist\tinymce\skins\ui\tinymce-5\content      23.2 KB        5.7 KB
+ .inline.js
+ dist\tinymce\skins\ui\oxide\content.inl      23.2 KB        5.7 KB
+ ine.js
+ dist\tinymce\skins\ui\oxide-dark\conten      23.2 KB        5.7 KB
+ t.inline.js
+ dist\tinymce\skins\ui\tinymce-5-dark\co      22.9 KB        5.7 KB
+ ntent.js
+ dist\tinymce\skins\ui\oxide-dark\conten      22.9 KB        5.7 KB
+ t.js
+ dist\tinymce\plugins\image\plugin.min.j      19.0 KB        7.0 KB
+ s
+ dist\p__TH03.fddca955.async.js               18.9 KB        4.3 KB
+ dist\145.fcc774f7.async.js                   17.9 KB        6.9 KB
+ dist\529.f7edfc97.async.js                   17.8 KB        5.8 KB
+ dist\tinymce\plugins\help\js\i18n\keyna      17.2 KB        1.9 KB
+ v\el.js
+ dist\tinymce\plugins\media\plugin.min.j      17.0 KB        6.4 KB
+ s
+ dist\tinymce\plugins\help\js\i18n\keyna      16.8 KB        1.8 KB
+ v\uk.js
+ dist\398.c93d08e0.async.js                   15.8 KB        5.6 KB
+ dist\tinymce\plugins\help\js\i18n\keyna      15.6 KB        1.8 KB
+ v\ru.js
+ dist\tinymce\plugins\help\js\i18n\keyna      15.5 KB        1.7 KB
+ v\bg_BG.js
+ dist\tinymce\plugins\link\plugin.min.js      15.5 KB        6.0 KB
+ dist\tinymce\plugins\fullscreen\plugin.      15.4 KB        6.1 KB
+ min.js
+ dist\tinymce\plugins\help\js\i18n\keyna      15.1 KB        1.7 KB
+ v\kk.js
+ dist\tinymce\plugins\help\js\i18n\keyna      13.2 KB        1.6 KB
+ v\ar.js
+ dist\tinymce\plugins\accordion\plugin.m      13.1 KB        5.2 KB
+ in.js
+ dist\tinymce\plugins\searchreplace\plug      13.1 KB        5.6 KB
+ in.min.js
+ dist\tinymce\plugins\help\js\i18n\keyna      12.4 KB        1.5 KB
+ v\th_TH.js
+ dist\tinymce\plugins\wordcount\plugin.m      11.7 KB        5.1 KB
+ in.js
+ dist\tinymce\plugins\help\js\i18n\keyna      11.6 KB        1.5 KB
+ v\fa.js
+ dist\tinymce\plugins\help\js\i18n\keyna      11.2 KB        1.5 KB
+ v\hi.js
+ dist\lang\vi_VN.js                           10.9 KB        4.0 KB
+ dist\tinymce\plugins\charmap\plugin.min      10.8 KB        4.4 KB
+ .js
+ dist\tinymce\plugins\help\plugin.min.js      10.7 KB        4.1 KB
+ dist\tinymce\plugins\help\js\i18n\keyna      10.4 KB        1.4 KB
+ v\he_IL.js
+ dist\657.506ed09e.async.js                   8.7 KB         3.5 KB
+ dist\p__TH01-BaiTap2.425436d6.async.js       7.9 KB         2.6 KB
+ dist\tinymce\plugins\help\js\i18n\keyna      7.3 KB         1.4 KB
+ v\ja.js
+ dist\tinymce\plugins\help\js\i18n\keyna      6.4 KB         1.4 KB
+ v\ko_KR.js
+ dist\tinymce\plugins\emoticons\plugin.m      6.4 KB         2.9 KB
+ in.js
+ dist\p__user__Login.11f79f84.async.js        6.1 KB         2.6 KB
+ dist\p__BaiTap1.4329dd17.async.js            6.0 KB         2.6 KB
+ dist\tinymce\plugins\help\js\i18n\keyna      5.8 KB         1.4 KB
+ v\vi.js
+ dist\p__TH02-BaiTap2.b8e01273.async.js       5.6 KB         1.5 KB
+ dist\tinymce\plugins\visualchars\plugin      5.6 KB         2.5 KB
+ .min.js
+ dist\tinymce\plugins\help\js\i18n\keyna      5.4 KB         1.3 KB
+ v\zh_TW.js
+ dist\tinymce\plugins\help\js\i18n\keyna      5.3 KB         1.3 KB
+ v\zh_CN.js
+ dist\tinymce\plugins\help\js\i18n\keyna      5.2 KB         1.4 KB
+ v\sk.js
+ dist\tinymce\plugins\help\js\i18n\keyna      5.1 KB         1.4 KB
+ v\cs.js
+ dist\tinymce\plugins\quickbars\plugin.m      5.0 KB         2.2 KB
+ in.js
+ dist\tinymce\plugins\help\js\i18n\keyna      4.8 KB         1.2 KB
+ v\tr.js
+ dist\tinymce\plugins\help\js\i18n\keyna      4.8 KB         1.4 KB
+ v\pl.js
+ dist\tinymce\plugins\help\js\i18n\keyna      4.8 KB         1.3 KB
+ v\hu_HU.js
+ dist\tinymce\plugins\help\js\i18n\keyna      4.7 KB         1.3 KB
+ v\ro.js
+ dist\tinymce\plugins\help\js\i18n\keyna      4.5 KB         1.3 KB
+ v\fi.js
+ dist\tinymce\plugins\help\js\i18n\keyna      4.4 KB         1.3 KB
+ v\hr.js
+ dist\tinymce\plugins\help\js\i18n\keyna      4.4 KB         1.2 KB
+ v\ca.js
+ dist\tinymce\plugins\help\js\i18n\keyna      4.4 KB         1.3 KB
+ v\de.js
+ dist\tinymce\plugins\help\js\i18n\keyna      4.4 KB         1.2 KB
+ v\it.js
+ dist\tinymce\plugins\directionality\plu      4.4 KB         1.9 KB
+ gin.min.js
+ dist\tinymce\plugins\help\js\i18n\keyna      4.4 KB         1.3 KB
+ v\fr_FR.js
+ dist\tinymce\plugins\help\js\i18n\keyna      4.3 KB         1.2 KB
+ v\es.js
+ dist\p__TodoList.a973ae81.async.js           4.2 KB         1.9 KB
+ dist\tinymce\plugins\help\js\i18n\keyna      4.2 KB         1.3 KB
+ v\sl_SI.js
+ dist\tinymce\plugins\help\js\i18n\keyna      4.0 KB         1.2 KB
+ v\nb_NO.js
+ dist\tinymce\plugins\importcss\plugin.m      3.9 KB         1.9 KB
+ in.js
+ dist\tinymce\plugins\help\js\i18n\keyna      3.9 KB         1.2 KB
+ v\pt_PT.js
+ dist\tinymce\plugins\help\js\i18n\keyna      3.8 KB         1.2 KB
+ v\nl.js
+ dist\tinymce\plugins\help\js\i18n\keyna      3.8 KB         1.1 KB
+ v\pt_BR.js
+ dist\tinymce\plugins\help\js\i18n\keyna      3.7 KB         1.1 KB
+ v\sv_SE.js
+ dist\tinymce\plugins\help\js\i18n\keyna      3.7 KB         1.2 KB
+ v\da.js
+ dist\tinymce\plugins\help\js\i18n\keyna      3.6 KB         1.1 KB
+ v\eu.js
+ dist\tinymce\plugins\advlist\plugin.min      3.6 KB         1.6 KB
+ .js
+ dist\p__BaiTap2.e92d238e.async.js            3.6 KB         1.5 KB
+ dist\tinymce\plugins\help\js\i18n\keyna      3.5 KB         1.1 KB
+ v\id.js
+ dist\tinymce\plugins\help\js\i18n\keyna      3.4 KB         1.1 KB
+ v\ms.js
+ dist\tinymce\plugins\help\js\i18n\keyna      3.3 KB         1.1 KB
+ v\en.js
+ dist\p__RandomUser.11b06159.async.js         3.3 KB         1.5 KB
+ dist\tinymce\plugins\autosave\plugin.mi      3.2 KB         1.4 KB
+ n.js
+ dist\tinymce\plugins\autolink\plugin.mi      3.1 KB         1.6 KB
+ n.js
+ dist\tinymce\plugins\insertdatetime\plu      2.9 KB         1.2 KB
+ gin.min.js
+ dist\tinymce\plugins\anchor\plugin.min.      2.5 KB         1.3 KB
+ js
+ dist\p__TH01-BaiTap1.4c04f0d4.async.js       2.5 KB         1.3 KB
+ dist\tinymce\plugins\autoresize\plugin.      2.4 KB         1.1 KB
+ min.js
+ dist\tinymce\plugins\preview\plugin.min      1.6 KB         910.0 B
+ .js
+ dist\tinymce\plugins\pagebreak\plugin.m      1.5 KB         841.0 B
+ in.js
+ dist\tinymce\plugins\save\plugin.min.js      1.5 KB         698.0 B
+ dist\tinymce\plugins\nonbreaking\plugin      1.5 KB         751.0 B
+ .min.js
+ dist\p__exception__403__403Page.dff9910      1.3 KB         798.0 B
+ 2.async.js
+ dist\tinymce\skins\content\document\con      1.3 KB         569.0 B
+ tent.js
+ dist\tinymce\skins\content\tinymce-5-da      1.3 KB         538.0 B
+ rk\content.js
+ dist\tinymce\skins\content\dark\content      1.2 KB         531.0 B
+ .js
+ dist\tinymce\skins\content\writer\conte      1.2 KB         516.0 B
+ nt.js
+ dist\p__TH02-BaiTap1.86175271.async.js       1.2 KB         630.0 B
+ dist\tinymce\skins\content\tinymce-5\co      1.2 KB         502.0 B
+ ntent.js
+ dist\tinymce\skins\content\default\cont      1.2 KB         503.0 B
+ ent.js
+ dist\tinymce\plugins\visualblocks\plugi      1.1 KB         540.0 B
+ n.min.js
+ dist\tinymce\plugins\code\plugin.min.js      827.0 B        468.0 B
+ dist\p__exception__DangCapNhat.7e9fa423      737.0 B        493.0 B
+ .async.js
+ dist\p__ThongBao__Check.8542f21b.async.      722.0 B        466.0 B
+ js
+ dist\p__ThongBao__Subscribe.df72bd2e.as      699.0 B        460.0 B
+ ync.js
+ dist\p__ThongBao__NotifOneSignal.ba239e      623.0 B        421.0 B
+ a1.async.js
+ dist\p__TrangChu.7b5d0a1b.async.js           596.0 B        383.0 B
+ dist\tinymce\skins\ui\tinymce-5-dark\sk      572.0 B        311.0 B
+ in.shadowdom.js
+ dist\tinymce\skins\ui\tinymce-5\skin.sh      567.0 B        307.0 B
+ adowdom.js
+ dist\tinymce\skins\ui\oxide\skin.shadow      565.0 B        309.0 B
+ dom.js
+ dist\tinymce\skins\ui\oxide-dark\skin.s      562.0 B        307.0 B
+ hadowdom.js
+ dist\p__TienIch__GioiThieu.0e36e39e.asy      538.0 B        348.0 B
+ nc.js
+ dist\OneSignalSDKWorker.js                   71.0 B         88.0 B
+ dist\umi.2678d0c0.css                        620.5 KB       76.5 KB
+ dist\tinymce\skins\ui\tinymce-5\skin.mi      90.8 KB        13.4 KB
+ n.css
+ dist\tinymce\skins\ui\tinymce-5-dark\sk      90.6 KB        13.5 KB
+ in.min.css
+ dist\tinymce\skins\ui\oxide\skin.min.cs      88.3 KB        12.9 KB
+ s
+ dist\tinymce\skins\ui\oxide-dark\skin.m      88.1 KB        12.9 KB
+ in.css
+ dist\897.98ee7078.chunk.css                  58.7 KB        8.3 KB
+ dist\689.ee6f3a54.chunk.css                  50.3 KB        6.7 KB
+ dist\398.6a0e8538.chunk.css                  25.0 KB        3.1 KB
+ dist\tinymce\skins\ui\oxide\content.min      20.8 KB        5.2 KB
+ .css
+ dist\tinymce\skins\ui\tinymce-5\content      20.8 KB        5.2 KB
+ .min.css
+ dist\tinymce\skins\ui\oxide-dark\conten      20.8 KB        5.2 KB
+ t.inline.min.css
+ dist\tinymce\skins\ui\oxide\content.inl      20.8 KB        5.2 KB
+ ine.min.css
+ dist\tinymce\skins\ui\tinymce-5-dark\co      20.8 KB        5.2 KB
+ ntent.inline.min.css
+ dist\tinymce\skins\ui\tinymce-5\content      20.8 KB        5.2 KB
+ .inline.min.css
+ dist\8.6ac24376.chunk.css                    20.7 KB        3.2 KB
+ dist\tinymce\skins\ui\oxide-dark\conten      20.4 KB        5.1 KB
+ t.min.css
+ dist\tinymce\skins\ui\tinymce-5-dark\co      20.4 KB        5.1 KB
+ ntent.min.css
+ dist\t__plugin-layout__Layout.df5e7472.      19.5 KB        3.4 KB
+ chunk.css
+ dist\p__BaiTap2.97cb4092.chunk.css           7.9 KB         1.9 KB
+ dist\p__TH01-BaiTap1.e47eff7e.chunk.css      7.0 KB         1.5 KB
+ dist\p__BaiTap1.430b1e4f.chunk.css           5.4 KB         1019.0 B
+ dist\p__TH03.402b8172.chunk.css              3.8 KB         1.2 KB
+ dist\p__user__Login.e73ce861.chunk.css       2.1 KB         810.0 B
+ dist\tinymce\skins\content\document\con      1.2 KB         527.0 B
+ tent.min.css
+ dist\tinymce\skins\content\tinymce-5-da      1.2 KB         494.0 B
+ rk\content.min.css
+ dist\tinymce\skins\content\dark\content      1.2 KB         491.0 B
+ .min.css
+ dist\tinymce\skins\content\writer\conte      1.1 KB         477.0 B
+ nt.min.css
+ dist\tinymce\skins\content\default\cont      1.1 KB         464.0 B
+ ent.min.css
+ dist\tinymce\skins\content\tinymce-5\co      1.1 KB         464.0 B
+ ntent.min.css
+ dist\tinymce\skins\ui\oxide-dark\skin.s      507.0 B        264.0 B
+ hadowdom.min.css
+ dist\tinymce\skins\ui\oxide\skin.shadow      507.0 B        264.0 B
+ dom.min.css
+ dist\tinymce\skins\ui\tinymce-5-dark\sk      507.0 B        264.0 B
+ in.shadowdom.min.css
+ dist\tinymce\skins\ui\tinymce-5\skin.sh      507.0 B        264.0 B
+ adowdom.min.css
+ dist\p__TienIch__GioiThieu.a13422eb.chu      333.0 B        190.0 B
+ nk.css
+ dist\p__TrangChu.a13422eb.chunk.css          333.0 B        190.0 B
+ dist\p__TH02-BaiTap2.202ec560.chunk.css      298.0 B        221.0 B
+
+  Images and other types of assets omitted.
+
