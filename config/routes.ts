@@ -110,6 +110,12 @@
 		component: './KTGK',
 	},
 	{
+		path: '/th07',
+		name: 'TH07',
+		icon: 'OrderedListOutlined',
+		component: './TH07',
+	},
+	{
 		path: '/notification',
 		routes: [
 			{
