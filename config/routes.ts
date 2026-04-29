@@ -116,6 +116,12 @@
 		component: './TH07',
 	},
 	{
+		path: '/th08',
+		name: 'TH08',
+		icon: 'OrderedListOutlined',
+		component: './TH08',
+	},
+	{
 		path: '/notification',
 		routes: [
 			{
