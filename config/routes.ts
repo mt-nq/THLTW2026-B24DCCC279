@@ -1,4 +1,4 @@
-﻿export default [
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -120,6 +120,12 @@
 		name: 'TH08',
 		icon: 'OrderedListOutlined',
 		component: './TH08',
+	},
+	{
+		path: '/th09',
+		name: 'TH09',
+		icon: 'AppstoreOutlined',
+		component: './TH09',
 	},
 	{
 		path: '/notification',
